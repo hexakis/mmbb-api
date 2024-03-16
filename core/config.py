@@ -1,13 +1,10 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
 
-env_path = Path(".") / ".env"
-load_dotenv(dotenv_path=env_path)
 
 class Settings:
-    PROJECT_NAME: str = "Marine Money Banking"
-    PROJECT_VERSION: str = "1.0.0"
+    PROJECT_NAME: str = os.getenv("PROJECT_NAME")
+    PROJECT_VERSION: str = os.getenv("PROJECT_VERSION")
 
 settings = Settings()
