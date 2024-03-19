@@ -6,7 +6,7 @@ from core.config import settings
 
 class TokenMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
-        noob_token = request.headers.get('NOOB_TOKEN')
+        noob_token = request.headers.get('NOOB-TOKEN')
         if noob_token == settings.NOOB_TOKEN:
             response = await call_next(request)
             return response
