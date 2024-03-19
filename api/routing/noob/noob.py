@@ -2,9 +2,9 @@ from fastapi import APIRouter
 from fastapi import Request
 
 noob_router = APIRouter(
-    prefix="/noob",
+    prefix="/api",
 )
 
-@noob_router.get("/health")
+@noob_router.get("/noob/health")
 async def noob_health_check(request: Request):
     return {"status": "OK"}
