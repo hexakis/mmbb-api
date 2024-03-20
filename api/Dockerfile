@@ -4,10 +4,6 @@ FROM python:3.11
 COPY ./ /api
 WORKDIR /api
 
-# Create non root user in case of privilege escalation attacks
-RUN adduser -D nonroot
-USER nonroot
-
 # Initalizing environment variables for configuration
 ENV PROJECT_NAME="Marine Money Banking"
 ENV PROJECT_VERSION=1.0
