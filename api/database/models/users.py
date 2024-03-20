@@ -17,7 +17,7 @@ class User(Base):
     date_of_birth = Column(Date, nullable=False)
     email = Column(String, unique=True, nullable=False)
     phone = Column(String(13), unique=True)
-    iban = Column(ARRAY(String(18)), unique=True)
+    iban = Column(String(18), unique=True)
     password = Column(String, nullable=False)
     customer_id = Column(Integer, nullable=False, index=True, primary_key=True, unique=True)
     totp = Column(String(30), nullable=False, unique=True)
