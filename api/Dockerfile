@@ -4,11 +4,16 @@ FROM python:3.11
 COPY ./ /api
 WORKDIR /api
 
+# Create non root user in case of privilege escalation attacks
+RUN adduser -D nonroot
+USER nonroot
+
 # Initalizing environment variables for configuration
 ENV PROJECT_NAME="Marine Money Banking"
 ENV PROJECT_VERSION=1.0
-ENV DATABASE_URL=postgresql://admin:admin@localhost:5432/marine
+ENV DATABASE_URL='sqlite:///./bank.db'
 ENV NOOB_TOKEN="06cc603c-2da8-45a8-8f43-16b460207a50"
+
 
 # Installing python packages
 RUN pip3 install --no-cache-dir --upgrade -r requirements.txt

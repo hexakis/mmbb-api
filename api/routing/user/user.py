@@ -41,5 +41,3 @@ async def authenticate_user(request: Request, db: Session = Depends(get_db)):
 @user_router.post("/change/{data}")
 async def change_user_data():
     return
-
-# f0aaf9ad-fa8b-439b-8e7f-8fc21d603dff api token
