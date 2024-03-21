@@ -1,4 +1,4 @@
-version: "1"
+version: "3.7"
 
 services:
   fastapi:
@@ -11,9 +11,6 @@ services:
     volumes:
       - ./data/caddy_data:/data
       - ./data/caddy_config:/config
-    ports:
-      - 80:80
-      - 443:443
     network_mode: "host"
 
 volumes:
