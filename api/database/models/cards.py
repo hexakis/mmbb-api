@@ -17,4 +17,4 @@ class Cards(Base):
     expiration_date = Column(Date, nullable=False)
     card_balance = Column(Numeric, nullable=False)
     card_type = Column(String, nullable=False, default="private")
-    pincode = Column(Numeric, nullable=False, default=0000)
+    pincode = Column(String, nullable=False)
