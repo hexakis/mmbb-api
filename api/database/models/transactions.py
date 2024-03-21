@@ -9,6 +9,6 @@ from sqlalchemy.orm import column_property, composite, mapper, relationship
 
 class Transaction(Base):
     created_at = Column(DateTime, nullable=False)
-    transaction_id = Column(Uuid, nullable=False)
-    customer_id = Column(Integer, nullable=False, index=True, primary_key=True)
+    transaction_id = Column(Uuid, nullable=False, primary_key=True)
+    customer_id = Column(Integer, nullable=False, index=True)
     transaction_amount = Column(Numeric, nullable=False)
