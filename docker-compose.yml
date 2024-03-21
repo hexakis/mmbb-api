@@ -1,0 +1,15 @@
+version: "1"
+
+services:
+  fastapi:
+    build: ./api/.
+    depends_on:
+      - caddy
+    ports:
+      - "8000:8000"
+  
+  caddy:
+    build: ./caddy/.
+    ports:
+      - "80:80"
+      - "443:443"
