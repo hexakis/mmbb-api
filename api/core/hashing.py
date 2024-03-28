@@ -1,4 +1,5 @@
 from passlib.context import CryptContext
+from passlib import salt
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

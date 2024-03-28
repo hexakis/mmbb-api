@@ -6,11 +6,11 @@ from core.config import settings
 
 class TokenMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
-        noob_token = request.headers.get('NOOB-TOKEN')
         if request.url.path == "/api/noob/health":
             response = await call_next(request)
             return response
         else:
+            noob_token = request.headers.get('NOOB-TOKEN')
             match noob_token:
                 case settings.NOOB_TOKEN:
                     response = await call_next(request)
