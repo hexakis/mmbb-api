@@ -3,6 +3,8 @@ version: "3.7"
 services:
   fastapi:
     build: ./api/.
+    expose:
+      - 8000
   
   caddy:
     build: ./caddy/.
@@ -11,8 +13,26 @@ services:
     volumes:
       - ./data/caddy_data:/data
       - ./data/caddy_config:/config
-    network_mode: "host"
+    ports:
+     - "443:443"
+     - "80:80"
+    links:
+      - "fastapi:api"
+
+  db:
+    image: postgres:14.1-alpine
+    restart: "always"
+    environment:
+      - POSTGRES_PASSWORD=bWFyaW5lbW9uZXliYW5raW5nMjAyNCEhIQ==
+      - POSTGRES_DB=marine
+      - POSTGRES_USER=admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
 
 volumes:
   caddy_data:
   caddy_config:
+  db:
+    driver: local
