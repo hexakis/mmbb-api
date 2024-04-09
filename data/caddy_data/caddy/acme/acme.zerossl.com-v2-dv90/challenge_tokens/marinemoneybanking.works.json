@@ -1,0 +1,1 @@
+{"type":"http-01","url":"https://acme.zerossl.com/v2/DV90/chall/7RBtH6GJh2UJh-WhY-YruA","status":"processing","token":"kgxqGXSg04H82kC-yXltHoqbBYuXKyLBigqkhMWEI1c","keyAuthorization":"kgxqGXSg04H82kC-yXltHoqbBYuXKyLBigqkhMWEI1c.nS0MGgibNrEifn3OQYJP8eHldL3JirFm4Fffv4E5QRI","identifier":{"type":"dns","value":"marinemoneybanking.works"}}
