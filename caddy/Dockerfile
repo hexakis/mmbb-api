@@ -6,7 +6,7 @@ COPY start.sh /app/start.sh
 
 COPY Caddyfile /etc/caddy/Caddyfile
 
-ENV PROXY_BACKEND=fastapi
+ENV PROXY_BACKEND=api
 ENV PROXY_PORT=8000
 ENV DOMAIN="marinemoneybanking.works"
 
