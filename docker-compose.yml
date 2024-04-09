@@ -20,7 +20,7 @@ services:
     links:
       - "fastapi:api"
     environment:
-      - "CADDY_ADMIN=8080"
+      - "CADDY_ADMIN=localhost:8080"
 
   db:
     image: postgres:14.1-alpine
