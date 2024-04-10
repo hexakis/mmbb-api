@@ -6,7 +6,7 @@ COPY start.sh /app/start.sh
 COPY cert.crt /app/cert.crt
 COPY priv.key /app/priv.key
 
-COPY Caddyfile /etc/caddy/Caddyfile
+COPY Caddyfile /app/Caddyfile
 
 EXPOSE 443 80
 
