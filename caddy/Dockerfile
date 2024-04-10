@@ -2,9 +2,9 @@ FROM caddy/caddy:2.7.6-alpine
 
 RUN mkdir /caddy
 
-COPY start.sh /caddy/start.sh
-COPY cert.crt /caddy/cert.crt
-COPY priv.key /caddy/priv.key
+COPY start.sh /app/start.sh
+COPY cert.crt /app/cert.crt
+COPY priv.key /app/priv.key
 
 COPY Caddyfile /etc/caddy/Caddyfile
 
