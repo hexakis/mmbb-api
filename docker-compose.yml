@@ -16,11 +16,8 @@ services:
     ports:
      - "443:443"
      - "80:80"
-     - "8080:8080"
     links:
       - "fastapi:api"
-    environment:
-      - "CADDY_ADMIN=localhost:8080"
 
   db:
     image: postgres:14.1-alpine

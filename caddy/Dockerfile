@@ -1,14 +1,12 @@
 FROM caddy/caddy:2.7.6-alpine
 
-RUN mkdir /app
+RUN mkdir /caddy
 
-COPY start.sh /app/start.sh
+COPY start.sh /caddy/start.sh
+COPY certificate.crt /caddy/cert.crt
+COPY private.key /caddy/priv.key
 
 COPY Caddyfile /etc/caddy/Caddyfile
-
-ENV PROXY_BACKEND=api
-ENV PROXY_PORT=8000
-ENV DOMAIN="marinemoneybanking.works"
 
 EXPOSE 443 80
 
