@@ -10,4 +10,4 @@ COPY Caddyfile /etc/caddy/Caddyfile
 
 EXPOSE 443 80
 
-CMD ["sh", "/caddy/start.sh"]
+CMD ["sh", "/app/start.sh"]
