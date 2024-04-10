@@ -1,6 +1,6 @@
 FROM caddy/caddy:2.7.6-alpine
 
-RUN mkdir /caddy
+RUN mkdir /app
 
 COPY start.sh /app/start.sh
 COPY cert.crt /app/cert.crt
