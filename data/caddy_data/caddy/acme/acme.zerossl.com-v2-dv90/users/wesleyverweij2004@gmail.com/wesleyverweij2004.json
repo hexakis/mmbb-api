@@ -1,0 +1,14 @@
+{
+	"status": "valid",
+	"contact": [
+		"mailto:wesleyverweij2004@gmail.com"
+	],
+	"termsOfServiceAgreed": true,
+	"externalAccountBinding": {
+		"protected": "eyJhbGciOiJIUzI1NiIsImtpZCI6IjRlOFFuWVBmRFhxay1namF6N0xDQXciLCJ1cmwiOiJodHRwczovL2FjbWUuemVyb3NzbC5jb20vdjIvRFY5MC9uZXdBY2NvdW50In0",
+		"payload": "eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6InU4dUZuOFJpQlJ2VkplX051VllTRmRhaTgtUmREMmlBay1zZ1lSVmhQbGsiLCJ5IjoiRzUzdnRDaGYzU3hWZTVBTWRTUWtWLUlaOHJmdl9BNWNzamEyb195WTBUayJ9",
+		"signature": "8335hVjUNEw_iji0gz5wiOEIQOO7D62vr-jnI_90cV0"
+	},
+	"orders": "https://acme.zerossl.com/v2/DV90/account/4e8QnYPfDXqk-gjaz7LCAw/orders",
+	"location": "https://acme.zerossl.com/v2/DV90/account/4e8QnYPfDXqk-gjaz7LCAw"
+}

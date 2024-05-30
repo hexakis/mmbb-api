@@ -1,0 +1,9 @@
+{
+	"status": "valid",
+	"contact": [
+		"mailto:wesleyverweij2004@gmail.com"
+	],
+	"termsOfServiceAgreed": true,
+	"orders": "",
+	"location": "https://acme-v02.api.letsencrypt.org/acme/acct/1642705667"
+}

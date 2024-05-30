@@ -6,15 +6,17 @@ from sqlalchemy import Uuid # UUID
 from sqlalchemy import Date # Date
 from sqlalchemy import String # VARCHAR
 from sqlalchemy import DateTime # Timestamp
+from sqlalchemy import ForeignKey
 from sqlalchemy.orm import column_property, composite, mapper, relationship
 
 
 class Cards(Base):
-    iban = Column(String(17), unique=True)
-    customer_id = Column(Integer, nullable=False)
-    created_at = Column(DateTime, nullable=False)
-    card_id = Column(Integer, nullable=False, unique=True, primary_key=True, index=True)
-    expiration_date = Column(Date, nullable=False)
-    card_balance = Column(Numeric, nullable=False)
-    card_type = Column(String, nullable=False, default="private")
-    pincode = Column(String, nullable=False)
+    __tablename__ = 'cards'
+    id = Column(Integer, primary_key=True, index=True)
+    UID = Column(String(8))
+    expDate = Column(Date)
+    Account_IBAN = Column(String(18), ForeignKey('user.IBAN'))
+    pinCode = Column(Integer)
+
+
+    user = relationship("User", back_populates="cards")

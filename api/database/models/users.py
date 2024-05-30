@@ -10,16 +10,14 @@ from sqlalchemy import DateTime # Timestamp
 from sqlalchemy.orm import column_property, composite, mapper, relationship
 
 class User(Base):
-    firstname = Column(String(20), nullable=False)
-    preposition = Column(String(20), nullable=True)
-    lastname = Column(String(20), nullable=False)
-    created_at = Column(DateTime, nullable=False)
-    date_of_birth = Column(Date, nullable=False)
-    email = Column(String, unique=True, nullable=False)
-    phone = Column(String(13), unique=True)
-    iban = Column(String(18), unique=True)
-    password = Column(String, nullable=False)
-    customer_id = Column(Integer, nullable=False, index=True, primary_key=True, unique=True)
-    totp = Column(String(30), nullable=False, unique=True)
-    balance = Column(Numeric, nullable=False)
+    __tablename__ = 'user'
+    IBAN = Column(String(18), primary_key=True, index=True)
+    firstName = Column(String(45))
+    lastName = Column(String(45))
+    email = Column(String(45))
+    phone = Column(String(45))
+    birthDate = Column(Date)
+    balance = Column(Integer)
+
+    cards = relationship("Cards", back_populates="user")
 
