@@ -5,19 +5,6 @@ services:
     build: ./api/.
     expose:
       - 8000
-  
-  caddy:
-    build: ./caddy/.
-    depends_on:
-      - fastapi
-    volumes:
-      - ./data/caddy_data:/data
-      - ./data/caddy_config:/config
-    ports:
-     - "443:443"
-     - "80:80"
-    links:
-      - "fastapi:api"
 
   db:
     image: postgres:14.1-alpine
@@ -26,6 +13,7 @@ services:
       - POSTGRES_PASSWORD=bWFyaW5lbW9uZXliYW5raW5nMjAyNCEhIQ==
       - POSTGRES_DB=marine
       - POSTGRES_USER=admin
+      - DB_USER=admin
     ports:
       - "5432:5432"
     volumes:

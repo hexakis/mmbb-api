@@ -4,12 +4,12 @@ FROM python:3.11
 COPY ./ /api
 WORKDIR /api
 
-ENV PROJECT_STATUS="DEV"
+ENV PROJECT_STATUS="PROD"
 
 # Initalizing environment variables for configuration
 ENV PROJECT_NAME="Marine Money Banking"
 ENV PROJECT_VERSION=3.0
-ENV DATABASE_URL='postgres:///admin:admin'
+ENV DATABASE_URL='postgres:///admin:bWFyaW5lbW9uZXliYW5raW5nMjAyNCEhIQ==@0.0.0.0t:5432/marine'
 ENV NOOB_TOKEN="06cc603c-2da8-45a8-8f43-16b460207a50"
 
 # Dev environment variables for configuration
